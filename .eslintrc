@@ -1,0 +1,14 @@
+{
+  "root": true,
+  "parser": "babel-eslint",
+  "extends": [
+    "standard"
+  ],
+  "rules": {
+    "yoda": 0
+  },
+  "globals": {
+    "DEBUG": false,
+    "VERSION": false
+  }
+}
