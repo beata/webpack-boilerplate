@@ -1,4 +1,9 @@
 {
-  "plugins": ["transform-runtime", "transform-export-extensions", "transform-class-properties", "transform-object-rest-spread", "transform-decorators-legacy"],
-  "presets": ["es2015-loose"]
+    "plugins": ["transform-runtime", "transform-export-extensions", "transform-class-properties", "transform-object-rest-spread", "transform-decorators-legacy"],
+    "presets": ["es2015-loose", "react"],
+    "env": {
+      "hot": {
+        "presets": ["react-hmre"]
+      }
+    }
 }

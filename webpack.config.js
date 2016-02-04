@@ -39,6 +39,8 @@ var vars = {
     // Automatically loaded modules. Module (value) is loaded when the identifier (key) is used as free variable in a module. The identifier is filled with the exports of the loaded module.
     // https://webpack.github.io/docs/list-of-plugins.html#provideplugin
     // _: 'lodash'
+    React: 'react',
+    ReactDOM: 'react-dom'
   },
   loaders: {
     js: {

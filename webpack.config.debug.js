@@ -1,7 +1,11 @@
 var webpack = require('webpack')
 var config = require('./webpack.config')
 
-var BrowserSyncPlugin = require('browser-sync-webpack-plugin')
+var HOT = (process.env.BABEL_ENV === 'hot')
+
+if (!HOT) {
+  var BrowserSyncPlugin = require('browser-sync-webpack-plugin')
+}
 
 // update webpack config
 Object.assign(config, {
@@ -19,6 +23,14 @@ Object.assign(config.output, {
   pathinfo: true
 })
 
-config.plugins.unshift(new BrowserSyncPlugin(config.browserSync))
+if (HOT) {
+  config.entry.main.unshift(
+    'webpack-hot-middleware/client'
+  )
+
+  config.plugins.unshift(new webpack.HotModuleReplacementPlugin())
+} else {
+  config.plugins.unshift(new BrowserSyncPlugin(config.browserSync))
+}
 
 module.exports = config

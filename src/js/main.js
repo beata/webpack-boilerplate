@@ -1,5 +1,3 @@
-import Test from './test'
+import Root from 'containers/root'
 
-let test = new Test()
-
-test.test()
+ReactDOM.render(<Root />, document.querySelector('#app'))

@@ -2,13 +2,16 @@
   "root": true,
   "parser": "babel-eslint",
   "extends": [
-    "standard"
+    "standard",
+    "standard-react"
   ],
   "rules": {
     "yoda": 0
   },
   "globals": {
     "DEBUG": false,
-    "VERSION": false
+    "VERSION": false,
+    "React": false,
+    "ReactDOM": false
   }
 }
