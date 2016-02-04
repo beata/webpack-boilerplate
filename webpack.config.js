@@ -64,8 +64,6 @@ module.exports = {
   resolve: {
     root: path.join(__dirname, './src/js'),
     modulesDirectories: [ 'node_modules' ],
-    // require('filename') without extensions
-    // .scss <- required of react-toolbox
     extensions: ['', '.js', '.jsx', '.json']
   },
   module: {
